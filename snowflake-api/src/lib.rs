@@ -80,6 +80,7 @@ pub enum SnowflakeApiError {
 /// Container for query result.
 /// Arrow is returned by-default for all SELECT statements,
 /// unless there is session configuration issue or it's a different statement type.
+#[derive(Debug)]
 pub enum QueryResult {
     Arrow(Vec<RecordBatch>),
     Json(serde_json::Value),
